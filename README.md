@@ -11,4 +11,4 @@
 &nbsp;&nbsp;&nbsp;&nbsp;b. git clone https://github.com/asifrasheed6/ArchLinux-Install</br>
 &nbsp;&nbsp;&nbsp;&nbsp;c. sh setup.sh</br>
 
-<b>Warning:</b> I wrote this script for my computer, might not work on yours. If you want to change the parition location, feel free to do that in the source code. Also the default desktop I'm installing is KDM plasma, feel free to change that in the source code before you install.
+<b>Note:</b> The desktop I'm installing is KDM plasma, feel free to change that in the source code before you install.
