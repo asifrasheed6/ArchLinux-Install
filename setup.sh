@@ -45,6 +45,7 @@ cd /
 cp /etc/sudoers /etc/sudoers.bak
 sed '82c\
 %wheel    ALL=(ALL)   ALL' /etc/sudoers.bak > /etc/sudoers
+cd ..
 
 # Installing bootloader
 read -p "Please enter your efi directory: " efi
@@ -66,6 +67,4 @@ echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal"
 read -p "Please enter all the extra package that you wish to install (default: None): " packages
 pacman -S firefox python3 geany gcc make sudo qterminal $packages
 
-cd ..
 echo "Setup Complete!, You may restart the machine!"
-
