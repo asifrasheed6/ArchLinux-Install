@@ -1,4 +1,5 @@
 # ArchLinux-Install
+### From the ArchLinux Live ISO:
 1. wifi-menu and connect to wifi
 2. pacman -Syy
 3. pacman -S git
