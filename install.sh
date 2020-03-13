@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "         ##
+echo "        	  ##
                  ####
                 ######
                ########
@@ -22,6 +22,8 @@ echo "Please enter your root directory: "
 read rdir
 echo "Please enter your efi directory: "
 read efi
+
+cd ..
 
 # Creating filesystem
 mkfs.fat -F32 $efi
