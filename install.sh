@@ -19,9 +19,9 @@ echo "        	  ##
  ###                              ###"
 echo "Install Arch Linux, written by Asif Rasheed"
 echo "Please enter your root directory: "
-read rdir
+read -r rdir
 echo "Please enter your efi directory: "
-read efi
+read -r efi
 
 cd ..
 
@@ -59,7 +59,7 @@ echo "127.0.1.1	myarch" >> /etc/hosts
 echo "Setting up root user..."
 passwd
 echo "Enter username..."
-read user
+read -r user
 useradd -m $user
 passwd $user
 
