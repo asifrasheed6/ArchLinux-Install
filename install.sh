@@ -39,6 +39,7 @@ pacstrap /mnt base linux linux-firmware vim nano
 # Configuring install
 genfstab -U /mnt >> /mnt/etc/fstab
 mv setup.sh /mnt
-arch-chroot /mnt ./setup.sh
+mv plasma-chili.tar /mnt
+arch-chroot /mnt sh setup.sh
 
 shutdown -r now
