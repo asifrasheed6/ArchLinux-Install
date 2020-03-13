@@ -21,6 +21,8 @@ echo "
                      "
 echo "Setting up ArchLinux..."
 
+cd ..
+
 # Setting Locale
 timedatectl set-timezone Asia/Dubai # Default Location: Dubai
 locale-gen
@@ -51,6 +53,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # Desktop environment setup
 pacman -S xorg xorg-server plasma sddm
+sudo tar -xzvf ~/Downloads/kde-plasma-chili.tar.gz -C /usr/share/sddm/themes
+cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
+sed '33c\
+Current=plasma-chili' /usr/lib/sddm/sddm.conf.d/default.bak > /usr/lib/sddm/sddm.conf.d/default.conf
 systemctl enable sddm
 
 # Network Manager
