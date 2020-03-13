@@ -43,15 +43,10 @@ useradd -m -G wheel $user
 passwd $user
 pacman -S sudo
 
-if test -f "/etc/sudoers.pacnew"; then
-    $f_sudo = "/etc/sudoers.pacnew"
-else
-    $f_sudo = "/etc/sudoers"
-fi
-
-cp $f_sudo /etc/sudoers.bak
+cp /etc/sudoers /etc/sudoers.bak
 sed '82c\
-%wheel    ALL=(ALL)   ALL' /etc/sudoers.bak > $f_sudo
+%wheel    ALL=(ALL)   ALL
+' /etc/sudoers.bak > /etc/sudoers
 
 # Installing bootloader
 read -p "Please enter your efi directory: " efi
@@ -69,7 +64,8 @@ systemctl enable sddm
 tar -xzvf plasma-chili.tar.gz -C /usr/share/sddm/themes
 cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
 sed '33c\
-Current=plasma-chili' /usr/lib/sddm/sddm.conf.d/default.bak > /usr/lib/sddm/sddm.conf.d/default.conf
+Current=plasma-chili
+' /usr/lib/sddm/sddm.conf.d/default.bak > /usr/lib/sddm/sddm.conf.d/default.conf
 
 # Network Manager
 systemctl enable NetworkManager.service
