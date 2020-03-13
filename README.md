@@ -7,4 +7,4 @@
 6. mv /ArchLinux-Install/* /
 7. sh install.sh
 
-Warning: I wrote this script for my computer, might not work on yours. If you want to change the parition location, feel free to do that in the source code. Also the default desktop I'm installing is KDM plasma, feel free to change that in the source code before you install.
+<b>Warning:</b> I wrote this script for my computer, might not work on yours. If you want to change the parition location, feel free to do that in the source code. Also the default desktop I'm installing is KDM plasma, feel free to change that in the source code before you install.
