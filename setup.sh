@@ -40,7 +40,7 @@ passwd
 read -p "Enter new username:" user
 useradd -m -G wheel $user
 passwd $user
-
+pacman -S sudo
 cd /
 cp /etc/sudoers /etc/sudoers.bak
 sed '82c\
@@ -63,8 +63,8 @@ systemctl enable sddm
 systemctl enable NetworkManager.service
 
 # Finishing up
-echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal"
+echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal by default"
 read -p "Please enter all the extra package that you wish to install (default: None): " packages
-pacman -S firefox python3 geany gcc make sudo qterminal $packages
+pacman -S firefox python3 geany gcc make qterminal $packages
 
 echo "Setup Complete!, You may restart the machine!"
