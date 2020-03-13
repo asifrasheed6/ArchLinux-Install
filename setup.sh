@@ -51,7 +51,9 @@ pacman -S xorg xorg-server plasma sddm
 systemctl enable sddm
 
 # Finishing up
-pacman -S firefox python3 geany gcc make sudo qterminal
+echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal"
+read -p "Please enter all the extra package that you wish to install: " packages
+pacman -S firefox python3 geany gcc make sudo qterminal $packages
 cd ..
 rm -rf ArchLinux-Install
 exit
