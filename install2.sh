@@ -31,4 +31,6 @@ systemctl enable sddm
 
 # Finishing up
 pacman -S firefox python3 geany gcc make sudo qterminal
+cd ..
+rm -rf ArchLinux-Install
 exit
