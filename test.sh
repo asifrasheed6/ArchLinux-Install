@@ -1,4 +1,4 @@
-tar -xzvf plasma-chili.tar -C /usr/share/sddm/themes
+tar xvf plasma-chili.tar -C /usr/share/sddm/themes
 
 cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
 sed '33c\
