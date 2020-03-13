@@ -77,6 +77,7 @@ systemctl enable NetworkManager.service
 clear
 echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal by default"
 read -p "Please enter all the extra package that you wish to install (default: None): " packages
-pacman -S firefox python3 geany gcc make qterminal $packages
+pacman -S firefox python3 geany gcc make qterminal base-devel $packages
+systemctl set-default graphical.target
 
 echo "Setup Complete!, You may restart the machine!"
