@@ -1,7 +1,8 @@
 # ArchLinux-Install
 ## Once you boot into ArchLinux using installation media: 
 ### Before you start
-Create an EFI partition.
+<b>Warning:</b> This is not an official tutorial.</br>
+Create an EFI partition:
 1. fdisk -l (find you drive from the list, it would be something like /dev/sda)
 2. cfdisk /dev/sda (replace /dev/sda with your drive)
 3. Create a 500 MB partition.
