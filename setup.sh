@@ -49,13 +49,13 @@ mount $efi /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# Desktop environment
+# Desktop environment setup
 pacman -S xorg xorg-server plasma sddm
 systemctl enable sddm
 
 # Finishing up
 echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal"
-read -p "Please enter all the extra package that you wish to install: " packages
+read -p "Please enter all the extra package that you wish to install (default: None): " packages
 pacman -S firefox python3 geany gcc make sudo qterminal $packages
 cd ..
 rm -rf ArchLinux-Install
