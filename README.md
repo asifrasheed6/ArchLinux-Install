@@ -1,5 +1,5 @@
 # ArchLinux-Install
-### Before You proceed
+### Before you start
 If you have a UEFI system, you must create an EFI partition at the beginning of your disk. 
 ### From the ArchLinux Live ISO:
 1. wifi-menu
