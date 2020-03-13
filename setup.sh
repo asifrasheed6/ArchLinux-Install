@@ -20,6 +20,7 @@ echo "
 ###                              ###
                      "
 echo "Setting up ArchLinux..."
+pacman -Syy
 
 # Setting Locale
 timedatectl set-timezone Asia/Dubai # Default Location: Dubai
