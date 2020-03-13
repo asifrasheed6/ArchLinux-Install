@@ -6,7 +6,7 @@
 4. git clone https://github.com/asifrasheed6/ArchLinux-Install
 5. cd ArchLinux-Install
 6. sh install.sh
-7. One install.sh finish running:</br>
+7. Once install.sh finish running:</br>
 &nbsp;&nbsp;&nbsp;&nbsp;a. pacman -S git</br>
 &nbsp;&nbsp;&nbsp;&nbsp;b. git clone https://github.com/asifrasheed6/ArchLinux-Install</br>
 &nbsp;&nbsp;&nbsp;&nbsp;c. sh setup.sh</br>
