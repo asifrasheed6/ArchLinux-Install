@@ -39,6 +39,7 @@ useradd -m $user
 passwd $user
 
 # Installing bootloader
+read -p "Please enter your efi directory: " efi
 pacman -S grub efibootmgr
 mkdir /boot/efi
 mount $efi /boot/efi
