@@ -14,7 +14,7 @@ echo "127.0.1.1    myarch" >> /etc/hosts
 # User Accounts
 echo "Setting up root user..."
 passwd
-read -p "Enter username..." user
+read -p "Enter new username:" user
 useradd -m $user
 passwd $user
 
