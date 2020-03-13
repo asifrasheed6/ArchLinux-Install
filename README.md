@@ -1,7 +1,6 @@
 # ArchLinux-Install
 ## Once you boot into ArchLinux using installation media: 
 ### Before you start
-<b>Warning:</b> This is not an official tutorial.</br>
 Create an EFI partition:
 1. fdisk -l (find you drive from the list, it would be something like /dev/sda)
 2. cfdisk /dev/sda (replace /dev/sda with your drive)
@@ -17,5 +16,5 @@ Root Directory is the location of the parition where you are installing the os (
 4. git clone https://github.com/asifrasheed6/ArchLinux-Install
 5. cd ArchLinux-Install
 6. sh install.sh
-
+<b>Warning:</b> This is not an official tutorial.</br>
 <b>Note:</b> The desktop I'm installing is KDM plasma, feel free to change that in the source code before you install.
