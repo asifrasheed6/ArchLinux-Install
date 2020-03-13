@@ -1,4 +1,5 @@
 # ArchLinux-Install
+## Once you boot into ArchLinux using installation media: 
 ### Before you start
 Create an EFI partition.
 1. fdisk -l (find you drive from the list, it would be something like /dev/sda)
@@ -8,7 +9,7 @@ Create an EFI partition.
 5. From the list on top, please note down your device locations like /dev/sda1 or /dev/sda2. (You need this during installation)
 ### Some definitions
 Root Directory is the location of the parition where you are installing the os (how to find location? read the previous section). EFI Directory is the location of the efi partition you created. 
-### From the ArchLinux Live ISO:
+### To install Arch Linux:
 1. wifi-menu
 2. pacman -Syy
 3. pacman -S git
