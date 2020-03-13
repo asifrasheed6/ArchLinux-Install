@@ -41,6 +41,3 @@ pacstrap /mnt base linux linux-firmware vim nano
 # Configuring install
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
-
-exit
-shutdown -r now
