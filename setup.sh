@@ -38,8 +38,13 @@ echo "127.0.1.1    myarch" >> /etc/hosts
 echo "Setting up root user..."
 passwd
 read -p "Enter new username:" user
-useradd -m $user
+useradd -m -G wheel $user
 passwd $user
+
+cd /
+cp /etc/sudoers /etc/sudoers.bak
+sed '82c\
+%wheel    ALL=(ALL)   ALL' /etc/sudoers.bak > /etc/sudoers
 
 # Installing bootloader
 read -p "Please enter your efi directory: " efi
@@ -50,13 +55,7 @@ grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Desktop environment setup
-pacman -S xorg xorg-server plasma sddm plymouth plymouth-theme-monoarch
-sudo tar -xzvf kde-plasma-chili.tar.gz -C /usr/share/sddm/themes
-rm -rf kde-plasma-chili.tar.gz
-cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
-sed '33c\
-Current=plasma-chili' /usr/lib/sddm/sddm.conf.d/default.bak > /usr/lib/sddm/sddm.conf.d/default.conf
-plymouth-set-default-theme -R monoarch
+pacman -S xorg xorg-server plasma sddm
 systemctl enable sddm
 
 # Network Manager
