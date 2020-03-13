@@ -30,5 +30,5 @@ pacman -S xorg xorg-server plasma sddm
 systemctl enable sddm
 
 # Finishing up
-pacman -S firefox python3 git geany gcc make sudo qterminal
+pacman -S firefox python3 geany gcc make sudo qterminal
 exit
