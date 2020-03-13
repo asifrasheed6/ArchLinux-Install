@@ -53,7 +53,7 @@ fi
 cp $f_sudo /etc/sudoers.bak
 sed '82c\
 %wheel    ALL=(ALL)   ALL' /etc/sudoers.bak > $f_sudo
-cd ..
+cd /home/asif/
 
 # Installing bootloader
 read -p "Please enter your efi directory: " efi
@@ -66,6 +66,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Desktop environment setup
 pacman -S xorg xorg-server plasma sddm
 systemctl enable sddm
+
+# Some test features
+tar -xzvf plasma-chili.tar.gz -C /usr/share/sddm/themes
+cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
+sed '33c\
+Current=plasma-chili' /usr/lib/sddm/sddm.conf.d/default.bak > /usr/lib/sddm/sddm.conf.d/default.conf
 
 # Network Manager
 systemctl enable NetworkManager.service
