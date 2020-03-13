@@ -42,9 +42,16 @@ useradd -m -G wheel $user
 passwd $user
 pacman -S sudo
 cd /
-cp /etc/sudoers /etc/sudoers.bak
+
+if test -f "/etc/sudoers.pacnew"; then
+    $f_sudo = "/etc/sudoers.pacnew"
+else
+    $f_sudo = "/etc/sudoers"
+fi
+
+cp $f_sudo /etc/sudoers.bak
 sed '82c\
-%wheel    ALL=(ALL)   ALL' /etc/sudoers.bak > /etc/sudoers
+%wheel    ALL=(ALL)   ALL' /etc/sudoers.bak > $f_sudo
 cd ..
 
 # Installing bootloader
