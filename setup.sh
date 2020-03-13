@@ -20,7 +20,7 @@ clear
 echo "Setting up root user..."
 passwd
 
-$user = "user"
+user = "user"
 read -p "Enter new username (default: user):" user
 useradd -m -G wheel $user
 passwd $user
