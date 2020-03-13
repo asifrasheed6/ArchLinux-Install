@@ -42,7 +42,6 @@ read -p "Enter new username:" user
 useradd -m -G wheel $user
 passwd $user
 pacman -S sudo
-cd /
 
 if test -f "/etc/sudoers.pacnew"; then
     $f_sudo = "/etc/sudoers.pacnew"
@@ -53,7 +52,6 @@ fi
 cp $f_sudo /etc/sudoers.bak
 sed '82c\
 %wheel    ALL=(ALL)   ALL' /etc/sudoers.bak > $f_sudo
-cd /home/asif/
 
 # Installing bootloader
 read -p "Please enter your efi directory: " efi
