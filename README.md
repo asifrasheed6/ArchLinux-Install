@@ -6,6 +6,8 @@ If you have a UEFI system, you must create an EFI partition.
 3. Create a 500 MB partition.
 4. Select type and choose EFI System.
 5. From the list on top, please note down your device locations like /dev/sda1 or /dev/sda2. (You need this during installation)
+### Some definitions
+Root Directory is the location of the parition where you are installing the os (how to find location? read the previous section). EFI Directory is the location of the efi partition you created. 
 ### From the ArchLinux Live ISO:
 1. wifi-menu
 2. pacman -Syy
