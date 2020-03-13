@@ -14,8 +14,7 @@ echo "
         -@#######h       ######@.`    
        /#####h**``       `**%@####@   
       @H@*`                    `*%#@  
-     *`                            `* 
- "
+     *`                            `* "
 echo "Setting up ArchLinux..."
 
 # Setting Locale

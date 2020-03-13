@@ -14,8 +14,7 @@ echo "
         -@#######h       ######@.`    
        /#####h**``       `**%@####@   
       @H@*`                    `*%#@  
-     *`                            `* 
- "
+     *`                            `* "
 echo "Install Arch Linux, written by Asif Rasheed"
 read -p "Please enter your root directory: " rdir
 read -p "Please enter your efi directory: " efi
