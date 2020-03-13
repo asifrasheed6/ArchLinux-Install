@@ -1,6 +1,11 @@
 # ArchLinux-Install
 ### Before you start
-If you have a UEFI system, you must create an EFI partition at the beginning of your disk. 
+If you have a UEFI system, you must create an EFI partition.
+1. fdisk -l (find you drive from the list, it would be something like /dev/sda)
+2. cfdisk /dev/sda (replace /dev/sda with your drive)
+3. Create a 500 MB partition.
+4. Select type and choose EFI System.
+5. From the list on top, please note down your device locations like /dev/sda1 or /dev/sda2. (You need this during installation)
 ### From the ArchLinux Live ISO:
 1. wifi-menu
 2. pacman -Syy
