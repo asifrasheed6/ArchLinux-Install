@@ -53,6 +53,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S xorg xorg-server plasma sddm
 systemctl enable sddm
 
+# Network Manager
+systemctl enable NetworkManager.service
+
 # Finishing up
 echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal"
 read -p "Please enter all the extra package that you wish to install (default: None): " packages
