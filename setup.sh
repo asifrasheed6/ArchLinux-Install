@@ -40,7 +40,7 @@ grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Desktop environment setup
-pacman -S xorg xorg-server plasma sddm
+pacman -S xorg xorg-server plasma sddm git
 systemctl enable sddm
 
 git clone https://github.com/MarianArlt/kde-plasma-chili --branch 0.5.5
