@@ -32,10 +32,9 @@ sed '82c\
 ' /etc/sudoers.bak > /etc/sudoers
 
 # Installing bootloader
-read -p "Please enter your efi directory: " efi
 pacman -S grub efibootmgr
 mkdir /boot/efi
-mount $efi /boot/efi
+mount $1 /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 
