@@ -5,7 +5,7 @@ We are welcoming contributions from the community whether it's reporting a bug, 
 In short the project follows all the terms and conditions applicable under the Apache License Version 2.0 with regards to modification, distribution, patent use, private use, commercial use, trademark use, liability and warranty.
 
 ## Report bugs using Github's [issues](https://github.com/asifrasheed6/ArchLinux-Install/issues)
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/asifrasheed6/ArchLinux-Install/issues/new); it's that easy!
 
 **Great Bug Reports** tend to have:
 
