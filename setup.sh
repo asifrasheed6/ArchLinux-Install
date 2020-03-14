@@ -56,7 +56,7 @@ systemctl enable NetworkManager.service
 clear
 echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal by default"
 read -p "Please enter all the extra package that you wish to install (default: None): " packages
-pacman -S firefox python3 geany gcc make dolphin alacritty base-devel $packages
+pacman -S firefox python3 geany gcc make dolphin alacritty base-devel xf86-video-vesa $packages
 systemctl set-default graphical.target
 
 rm -rf plasma-chili.tar
