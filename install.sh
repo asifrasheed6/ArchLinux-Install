@@ -42,4 +42,5 @@ mv setup.sh /mnt
 mv plasma-chili.tar /mnt
 arch-chroot /mnt sh setup.sh $efi
 
+umount -R /mnt
 shutdown -r now
