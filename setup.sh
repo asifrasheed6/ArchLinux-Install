@@ -60,4 +60,5 @@ read -p "Please enter all the extra package that you wish to install (default: N
 pacman -S firefox python3 geany gcc make dolphin alacritty base-devel $packages
 systemctl set-default graphical.target
 
-echo "Setup Complete!, You may restart the machine!"
+rm -rf plasma-chili.tar
+rm -rf $0
