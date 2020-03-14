@@ -63,5 +63,4 @@ read -p "Please enter all the extra package that you wish to install (default: N
 pacman -S firefox python3 geany gcc make dolphin alacritty base-devel xf86-video-vesa $packages
 systemctl set-default graphical.target
 
-rm -rf plasma-chili.tar
 rm -rf $0
