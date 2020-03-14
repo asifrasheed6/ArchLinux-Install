@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 echo "Setting up ArchLinux..."
 pacman -Syy
 
