@@ -13,7 +13,7 @@ Root Directory is the location of the parition where you are installing the os (
 1. wifi-menu
 2. pacman -Syy
 3. pacman -S git
-4. git clone https://github.com/asifrasheed6/ArchLinux-Install --branch v0.1-rev1
+4. git clone https://github.com/asifrasheed6/ArchLinux-Install --branch v0.1-rev2
 5. cd ArchLinux-Install
 6. sh install.sh
 
