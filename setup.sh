@@ -42,7 +42,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S xorg xorg-server plasma sddm
 systemctl enable sddm
 
-tar xvf plasma-chili.tar -C /usr/share/sddm/themes
+git clone https://github.com/MarianArlt/kde-plasma-chili --branch 0.5.5
+mkdir /usr/share/sddm/themes/plasma-chili
+mv kde-plasma-chili/* /usr/share/sddm/themes/plasma-chili
+rm -rf kde-plasma-chili
 
 cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
 sed '33c\
