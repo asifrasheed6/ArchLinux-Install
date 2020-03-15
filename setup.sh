@@ -11,10 +11,11 @@ read -p "Please enter your time zone (default: Asia/Dubai): " location
 
 if test "$location" = ""
 then
-    location = "Asia/Dubai"
+    timedatectl set-timezone "Asia/Dubai"
+else
+    timedatectl set-timezone $location
 fi
 
-timedatectl set-timezone $location # Default Location: Dubai
 locale-gen
 echo LANG=en_GB.UTF-8 > /etc/locale.conf
 export LANG=en_GB.UTF-8
@@ -37,10 +38,11 @@ read -p "Enter new username (default: user):" user
 
 if test "$user" = ""
 then
-    user = "user"
+    useradd -m -G wheel user
+else
+    useradd -m -G wheel $user
 fi
 
-useradd -m -G wheel $user
 passwd $user
 pacman -S sudo
 

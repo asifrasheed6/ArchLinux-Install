@@ -25,10 +25,10 @@ read -p "Please enter your keyboard layout (default: us): " layout
 
 if test "$layout" = ""
 then
-    layout = "us"
+    loadkeys us
+else
+    loadkeys $layout
 fi
-
-loadkeys $layout
 
 read -p "Please enter your root directory: " rdir
 read -p "Please enter your efi directory: " efi
