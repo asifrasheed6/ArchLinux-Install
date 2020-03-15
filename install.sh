@@ -26,10 +26,8 @@ read -p "Please enter your keyboard layout (default: us): " layout
 if test "$layout" = ""
 then
     loadkeys us
-    lay = "us"
 else
     loadkeys $layout
-    lay = $layout
 fi
 
 read -p "Please enter your root directory: " rdir
@@ -51,7 +49,13 @@ pacstrap /mnt base linux linux-firmware vim nano
 # Configuring install
 genfstab -U /mnt >> /mnt/etc/fstab
 mv setup.sh /mnt
-arch-chroot /mnt sh setup.sh $efi $lay
+
+if test "$layout" = ""
+then
+    arch-chroot /mnt sh setup.sh $efi "us"
+else
+    arch-chroot /mnt sh setup.sh $efi $layout
+fi
 
 umount -R /mnt
 shutdown -r now
