@@ -40,27 +40,52 @@ grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Desktop environment setup
-pacman -S xorg xorg-server plasma sddm git
+pacman -S xorg xorg-server plasma sddm git wget
 systemctl enable sddm
 
-git clone https://github.com/MarianArlt/kde-plasma-chili --branch 0.5.5
-mkdir /usr/share/sddm/themes/plasma-chili
-mv kde-plasma-chili/* /usr/share/sddm/themes/plasma-chili
-rm -rf kde-plasma-chili
+git clone https://www.opencode.net/marianarlt/sddm-sugar-candy
+mkdir /usr/share/sddm/themes/sugar-candy
+mv sddm-sugar-candy/* /usr/share/sddm/themes/sugar-candy
+rm -rf sugar-candy
+
+wget https://unsplash.com/photos/H7nMkBMgcNw/download
+mv download /usr/share/sddm/themes/sugar-candy/Backgrounds/wallpaper.jpg
 
 cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
 sed '33c\
-Current=plasma-chili
+Current=sugar-candy
 ' /usr/lib/sddm/sddm.conf.d/default.bak > /usr/lib/sddm/sddm.conf.d/default.conf
+
+cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
+sed '3c\
+Background="Backgrounds/wallpaper.jpg"
+' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
+
+cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
+sed '21c\
+PartialBlur="false"
+' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
+
+sed '34c\
+FormPosition="center"
+' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
+
+sed '47c\
+AccentColor="#5e5e5e"
+' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
+
+sed '119c\
+HeaderText=""
+' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
 
 # Network Manager
 systemctl enable NetworkManager.service
 
 # Finishing up
 clear
-echo "The Setup will install Firefox, Python3, Geany, GCC, Make and Terminal by default"
+echo "The Setup will install VLC, Image View, Firefox, Python3, Geany, GCC, Make and Terminal by default"
 read -p "Please enter all the extra package that you wish to install (default: None): " packages
-pacman -S firefox python3 geany gcc make dolphin alacritty base-devel xf86-video-vesa $packages
+pacman -S vlc viewnior firefox python3 python-pip geany gcc make dolphin alacritty base-devel xf86-video-vesa $packages
 systemctl set-default graphical.target
 
 rm -rf $0
