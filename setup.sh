@@ -8,7 +8,11 @@ pacman -Syy
 
 # Setting Locale
 read -p "Please enter your time zone (default: Asia/Dubai): " location
-if $location = "" then location = "Asia/Dubai" fi
+
+if $location == ""
+then
+    location = "Asia/Dubai"
+fi
 
 timedatectl set-timezone $location # Default Location: Dubai
 locale-gen
@@ -30,7 +34,11 @@ echo "Setting up root user..."
 passwd
 
 read -p "Enter new username (default: user):" user
-if $user = "" then user = "user" fi
+
+if $user == ""
+then
+    user = "user"
+fi
 
 useradd -m -G wheel $user
 passwd $user

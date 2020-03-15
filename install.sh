@@ -23,7 +23,7 @@ echo "Install Arch Linux, written by Asif Rasheed"
 
 read -p "Please enter your keyboard layout (default: us): " layout
 
-if $layout = ""
+if $layout == ""
 then
     layout = "us"
 fi
