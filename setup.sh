@@ -1,13 +1,21 @@
 #!/bin/bash
+# $0 refers to this script itself
+# $1 refers to the first argument passed (in our case, from install.sh it is $EFI)
+# $2 refers to the second argument passed (in our case, from install.sh it is $layout)
 clear
 echo "Setting up ArchLinux..."
 pacman -Syy
 
 # Setting Locale
-timedatectl set-timezone Asia/Dubai # Default Location: Dubai
+read -p "Please enter your time zone (default: Asia/Dubai): " location
+if $location = "" then location = "Asia/Dubai" fi
+
+timedatectl set-timezone $location # Default Location: Dubai
 locale-gen
 echo LANG=en_GB.UTF-8 > /etc/locale.conf
 export LANG=en_GB.UTF-8
+
+echo "KEYMAP=$2" >> /etc/vconsole.conf
 
 # Network Configuration
 echo myarch > /etc/hostname
@@ -21,8 +29,9 @@ clear
 echo "Setting up root user..."
 passwd
 
-user = "user"
 read -p "Enter new username (default: user):" user
+if $user = "" then user = "user" fi
+
 useradd -m -G wheel $user
 passwd $user
 pacman -S sudo
@@ -48,7 +57,7 @@ mkdir /usr/share/sddm/themes/sugar-candy
 mv sddm-sugar-candy/* /usr/share/sddm/themes/sugar-candy
 rm -rf sugar-candy
 
-wget https://unsplash.com/photos/H7nMkBMgcNw/download
+wget https://unsplash.com/photos/H7nMkBMgcNw/download #non-copyrighted wallpaper
 mv download /usr/share/sddm/themes/sugar-candy/Backgrounds/wallpaper.jpg
 
 cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
@@ -71,12 +80,18 @@ FormPosition="center"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
 
 sed '47c\
-AccentColor="#5e5e5e"
+AccentColor="#FFFFFF"
+' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
+
+sed '53c\
+OverrideLoginButtonTextColor="#000000"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
 
 sed '119c\
 HeaderText=""
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
+
+lookandfeeltool -a 'org.kde.breezedark.desktop'
 
 # Network Manager
 systemctl enable NetworkManager.service

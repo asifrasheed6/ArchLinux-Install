@@ -20,6 +20,11 @@ echo "
 ###                              ###
                      "
 echo "Install Arch Linux, written by Asif Rasheed"
+
+read -p "Please enter your keyboard layout (default: us): " layout
+if $layout = "" then layout = "us" fi
+loadkeys $layout
+
 read -p "Please enter your root directory: " rdir
 read -p "Please enter your efi directory: " efi
 
@@ -39,7 +44,7 @@ pacstrap /mnt base linux linux-firmware vim nano
 # Configuring install
 genfstab -U /mnt >> /mnt/etc/fstab
 mv setup.sh /mnt
-arch-chroot /mnt sh setup.sh $efi
+arch-chroot /mnt sh setup.sh $efi $layout
 
 umount -R /mnt
 shutdown -r now
