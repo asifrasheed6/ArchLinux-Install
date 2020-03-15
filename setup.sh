@@ -9,7 +9,7 @@ pacman -Syy
 # Setting Locale
 read -p "Please enter your time zone (default: Asia/Dubai): " location
 
-if $location == ""
+if test "$location" = ""
 then
     location = "Asia/Dubai"
 fi
@@ -35,7 +35,7 @@ passwd
 
 read -p "Enter new username (default: user):" user
 
-if $user == ""
+if test "$user" = ""
 then
     user = "user"
 fi
