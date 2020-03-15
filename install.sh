@@ -22,10 +22,11 @@ echo "
 echo "Install Arch Linux, written by Asif Rasheed"
 
 read -p "Please enter your keyboard layout (default: us): " layout
-if $layout = ""
-then
-layout = "us"
+
+if $layout = "" then
+    layout = "us"
 fi
+
 loadkeys $layout
 
 read -p "Please enter your root directory: " rdir
