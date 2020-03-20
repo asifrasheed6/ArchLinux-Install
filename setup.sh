@@ -52,7 +52,8 @@ sed '82c\
 ' /etc/sudoers.bak > /etc/sudoers
 
 # Installing bootloader
-pacman -S grub efibootmgr
+pacman -S os-prober grub efibootmgr
+os-prober
 mkdir /boot/efi
 mount $1 /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
@@ -80,7 +81,6 @@ sed '3c\
 Background="Backgrounds/wallpaper.jpg"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
 
-cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
 sed '21c\
 PartialBlur="false"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf
