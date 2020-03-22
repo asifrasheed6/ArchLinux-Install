@@ -17,6 +17,6 @@ Root Directory is the location of the parition where you are installing the os (
 5. cd ArchLinux-Install
 6. sh install.sh
 
-Feel free to [email me](asif@linuxmail.org) if you have any issues.</br>
+Feel free to [email me](mailto:asif@linuxmail.org) if you have any issues.</br>
 <b>Warning:</b> This is not an official tutorial.</br>
 <b>Note:</b> The desktop I'm installing is KDM plasma, feel free to change that in the source code before you install.
