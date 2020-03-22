@@ -52,7 +52,7 @@ mv setup.sh /mnt
 
 if test "$layout" = ""
 then
-    arch-chroot /mnt sh setup.sh $efi "us"
+    arch-chroot /mnt sh setup.sh $efi us
 else
     arch-chroot /mnt sh setup.sh $efi $layout
 fi
