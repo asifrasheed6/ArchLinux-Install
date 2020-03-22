@@ -73,30 +73,30 @@ wget https://unsplash.com/photos/H7nMkBMgcNw/download # non-copyrighted wallpape
 mv download /usr/share/sddm/themes/sugar-candy/Backgrounds/wallpaper.jpg
 
 # Modifies the sugar candy login screen
-cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
+# cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
 sed '3c\
 Background="Backgrounds/wallpaper.jpg"
-' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets new wallpaper for sugar candy
+' /usr/share/sddm/themes/sugar-candy/theme.conf > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets new wallpaper for sugar candy
 
 sed '21c\
 PartialBlur="false"
-' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Removes Paritial Blur
+' /usr/share/sddm/themes/sugar-candy/theme.conf > /usr/share/sddm/themes/sugar-candy/theme.conf # Removes Paritial Blur
 
 sed '34c\
 FormPosition="center"
-' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Moves the login form to center
+' /usr/share/sddm/themes/sugar-candy/theme.conf > /usr/share/sddm/themes/sugar-candy/theme.conf # Moves the login form to center
 
 sed '47c\
 AccentColor="#FFFFFF"
-' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets the accent color as white
+' /usr/share/sddm/themes/sugar-candy/theme.conf > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets the accent color as white
 
 sed '53c\
 OverrideLoginButtonTextColor="#000000"
-' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets the login button text color as black
+' /usr/share/sddm/themes/sugar-candy/theme.conf > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets the login button text color as black
 
 sed '119c\
 HeaderText=""
-' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Removes the Header Text 
+' /usr/share/sddm/themes/sugar-candy/theme.conf > /usr/share/sddm/themes/sugar-candy/theme.conf # Removes the Header Text
 
 cp /usr/lib/sddm/sddm.conf.d/default.conf /usr/lib/sddm/sddm.conf.d/default.bak
 sed '33c\
