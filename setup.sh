@@ -73,7 +73,8 @@ wget https://unsplash.com/photos/H7nMkBMgcNw/download # non-copyrighted wallpape
 mv download /usr/share/sddm/themes/sugar-candy/Backgrounds/wallpaper.jpg
 
 # Modifies the sugar candy login screen
-# cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
+cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
+
 sed '3c\
 Background="Backgrounds/wallpaper.jpg"
 ' /usr/share/sddm/themes/sugar-candy/theme.conf > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets new wallpaper for sugar candy
