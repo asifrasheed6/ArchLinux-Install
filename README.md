@@ -23,6 +23,6 @@ You could download the latest releases [as zip](https://github.com/asifrasheed6/
 
 Feel free to [email me](mailto:asif@linuxmail.org) if you have any issues.
 
-<b>Warning:</b> This is not an official tutorial.
+<b>Warning:</b> This is not an [official tutorial](https://wiki.archlinux.org/index.php/installation_guide).
 
 <b>Note:</b> The desktop I'm installing is KDM plasma, feel free to change that in the source code before you install.
