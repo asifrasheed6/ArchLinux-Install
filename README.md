@@ -19,7 +19,7 @@ Root Directory is the location of the parition where you are installing the os (
 5. cd ArchLinux-Install
 6. sh install.sh
 
-You could download the latest releases [as zip](https://github.com/asifrasheed6/ArchLinux-Install/archive/v0.1-rev3.zip) and [as tar.gz](https://github.com/asifrasheed6/ArchLinux-Install/archive/v0.1-rev3.tar.gz) or [find older releases](https://github.com/asifrasheed6/ArchLinux-Install/releases).
+You could download the latest releases [as zip](https://github.com/asifrasheed6/ArchLinux-Install/archive/v0.1-rev3.zip) and [as tar.gz](https://github.com/asifrasheed6/ArchLinux-Install/archive/v0.1-rev3.tar.gz) or [find older releases here](https://github.com/asifrasheed6/ArchLinux-Install/releases).
 
 Feel free to [email me](mailto:asif@linuxmail.org) if you have any issues.
 
