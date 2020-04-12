@@ -1,1 +1,3 @@
 theme: jekyll-theme-cayman
+title: ArchLinux Installer
+description: A simple bash script to help you install ArchLinux 
