@@ -24,3 +24,5 @@ Feel free to [email me](mailto:asif@linuxmail.org) if you have any issues.
 **Warning:** This is not an [official tutorial](https://wiki.archlinux.org/index.php/installation_guide).
 
 **Note:** The desktop I'm installing is KDM plasma, feel free to change that in the source code before you install.
+
+By downloading contents of this repository, you are agreeing to the terms and conditions specified by the [software license](https://raw.githubusercontent.com/asifrasheed6/ArchLinux-Install/master/LICENSE)
