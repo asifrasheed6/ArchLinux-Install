@@ -1,4 +1,3 @@
-## Once you boot into ArchLinux using installation media: 
 ### Before you start
 Create an EFI partition:
 1. fdisk -l (find you drive from the list, it would be something like /dev/sda)
