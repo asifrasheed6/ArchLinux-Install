@@ -78,22 +78,27 @@ sed '3c\
 Background="Backgrounds/wallpaper.jpg"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets new wallpaper for sugar candy
 
+cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
 sed '21c\
 PartialBlur="false"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Removes Paritial Blur
 
+cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
 sed '34c\
 FormPosition="center"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Moves the login form to center
 
+cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
 sed '47c\
 AccentColor="#FFFFFF"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets the accent color as white
 
+cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
 sed '53c\
 OverrideLoginButtonTextColor="#000000"
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Sets the login button text color as black
 
+cp /usr/share/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.bak
 sed '119c\
 HeaderText=""
 ' /usr/share/sddm/themes/sugar-candy/theme.bak > /usr/share/sddm/themes/sugar-candy/theme.conf # Removes the Header Text 
